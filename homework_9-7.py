@@ -6,19 +6,17 @@ def is_prime(func):
             if a % i == 0:
                 word.append(i)
         if len(word) > 2:
-            b = 'Составное'
+            b = f'Составное\n{a}'
         else:
-            b = 'Простое'
+            b = f'Простое\n{a}'
         return b
     return wrapper
 
-# @is_prime
+@is_prime
 def sum_three(x, y, z):
     sum_ = x + y + z
     return sum_
 
-sum_three1 = is_prime(sum_three)
-print(sum_three1)
 
 result = sum_three(7, 11, 25)
 print(result)
